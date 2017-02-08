@@ -31,6 +31,7 @@ SfxFx.CopyList=11     ; %windir%\system32
 3DHP.CopyFiles=11
 SRSFx.CopyList=11,SRSLabs
 SfxFxW8.CopyList=11     ; %windir%\system32
+ST.DLL.CopyList=11
 
 [DriverInfo.DelReg]
 HKLM,Software\InstalledOptions\%DriverMfgr%\%DriverFamily%\%DriverMfgr%\%DriverProduct%
@@ -67,6 +68,16 @@ sltech32.dll=222
 sluapo32.dll=222
 slconfig.xml=222
 
+stapi32.dll=222
+stapo.dll=222
+stcplx.dll=222
+stlang.dll=222
+
+srs_apo_suite.dll=222
+Com_SRS_WOWHD.dll=222
+Com_SRS_TruSurroundXT.dll=222
+SRS_APO_Prop_Page.dll=222
+
 [Manufacturer]
 %CNXT%=Conexant, NTx86.6.1, NTx86.6.2, NTx86.6.3, NTx86.6.4
 
@@ -83,6 +94,9 @@ slcnt32.dll=SignatureAttributes.PETrust
 slprp32.dll=SignatureAttributes.PETrust
 sltech32.dll=SignatureAttributes.PETrust
 sluapo32.dll=SignatureAttributes.PETrust
+srs_apo_suite.dll=SignatureAttributes.PETrust
+com_srs_wowhd.dll=SignatureAttributes.PETrust
+com_srs_trusurroundxt.dll=SignatureAttributes.PETrust
 
 [SignatureAttributes.DRM]
 DRMLevel=1300
@@ -217,128 +231,128 @@ ExcludeFromSelect = *
 [HdAud2075x.14Z950]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
 CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x.15Z960]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
 CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, AECOn.AddReg
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, AECOn.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x.15Z950]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
 CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, LvlRelAdjust.AddReg
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, LvlRelAdjust.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x.13U360]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x_13U.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, PortA.AddReg, MicGain.AddReg, NoMicNR.AddReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
+CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, 3DHP.CopyFiles
+AddReg    = HdAudModel.AddReg, HdAud2075x_13U.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, PortA.AddReg, MicGain.AddReg, NoMicNR.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFx.RegisterDlls
+RegisterDlls=SfxFx.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls
 
 [HdAud2075x.15P660]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
 CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, PortA.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x.15P560]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
 CopyFiles = HdAudModelV64.Copylist, Uninstall.Copylist, SfxFx.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x_15P.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg
+AddReg    = HdAudModel.AddReg, HdAud2075x_15P.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, PortA.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x3.14Z950]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, ST.DLL.CopyList, SRSFx.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x3.15Z960]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, AECOn.AddReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, ST.DLL.CopyList, SRSFx.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, AECOn.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x3.15Z950]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, LvlRelAdjust.AddReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, ST.DLL.CopyList, SRSFx.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, LvlRelAdjust.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x3.13U360]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x_13U.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, PortA.AddReg, MicGain.AddReg, NoMicNR.AddReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, ST.DLL.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x_13U.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, PortA.AddReg, MicGain.AddReg, NoMicNR.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls
 
 [HdAud2075x3.15P560]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x_15P.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, ST.DLL.CopyList, SRSFx.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x_15P.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, PortA.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x3.15P660]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, PortA.AddReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, ST.DLL.CopyList, SRSFx.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, PortA.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x4.14Z950]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, ASR.AddReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, ST.DLL.CopyList, SRSFx.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, ASR.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x4.15Z960]
 Include=ks.inf,wdmaudio.inf
 Needs=KS.Registration,WDMAUDIO.Registration
-DelReg=HdAud.DelReg, DriverInfo.DelReg
-CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, SRSFx.CopyList
-AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, SRS.AddReg, ASR.AddReg, AECOn.AddReg
+DelReg=HdAud.DelReg, DriverInfo.DelReg, ST.FX.DelReg
+CopyFiles = HdAudModel.Copylist, Uninstall.Copylist, SfxFxW8.CopyList, 3DHP.CopyFiles, ST.DLL.CopyList, SRSFx.CopyList
+AddReg    = HdAudModel.AddReg, HdAud2075x.AddReg, DriverInfo.AddReg, Couninstaller.AddReg, ST.FX.AddReg, SRSAPO.AddReg, SRS.AddReg, ASR.AddReg, AECOn.AddReg
 AddProperty = HdAudBranding.AddProperty
-RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, SRS.RegisterDlls
+RegisterDlls=SfxFxW8.RegisterDlls, 3DHP.RegisterDlls, ST.DLL.RegisterDlls, SRS.RegisterDlls
 
 [HdAud2075x.14Z950.Services]
 AddService=CnxtHdAudService, 0x00000002, HdAud_Service_Install
@@ -536,14 +550,19 @@ HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\%UIPATH%, Publisher,,%
 HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\%UIPATH%, DisplayIcon,,%16422%\CONEXANT\%UIPATH%\UIU32a.exe
 HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\%UIPATH%",UninstallString,,%16422%\CONEXANT\%UIPATH%\UIU32a.exe -U -G -Ichdrt.inf
 
+[STFx.AddReg]
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Audio","DisableProtectedAudioDG", %REG_DWORD%, 0x00000001
+
 [HdAudModel.SSysFx.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_ren"
 HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%SYSFX_POSTMIX_CLSID%
 HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SRS_SYSFX_PREMIX_CLSID%
 ;HKR,"FX\\0",%PKEY_FX_UiClsid%,,%FX_UI_CLSID%
 HKR,"FX\\0",%PKEY_FX_UiClsid%,,%PAGE_MASTER_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_0%,,%3DHP_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_1%,,%FX_UI_CLSID%
+HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_2%,,%ST_SYSFX_UI_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0010
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX_BEAMFORMING%, %REG_DWORD%, 0x0000
@@ -565,12 +584,14 @@ HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
 
 [HdAudModel.SSysFx.CNXT.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
-HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%SYSFX_POSTMIX_CLSID%
-HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_ren"
+HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%ST_SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%ST_SYSFX_POSTMIX_CLSID%
 ;HKR,"FX\\0",%PKEY_FX_UiClsid%,,%FX_UI_CLSID%
 HKR,"FX\\0",%PKEY_FX_UiClsid%,,%PAGE_MASTER_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_0%,,%3DHP_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_1%,,%FX_UI_CLSID%
+HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_2%,,%ST_SYSFX_UI_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0010
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX_BEAMFORMING%, %REG_DWORD%, 0x0000
@@ -586,12 +607,14 @@ HKR,"FX\\0","{0C709614-E770-0001-4000-018664542698},1020", %REG_DWORD%, 0x0000  
 
 [HdAudModel.SSysFxW8.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
-;;HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%SYSFX_POSTMIX_CLSID%
-;;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_ren"
+;;HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%ST_SYSFX_PREMIX_CLSID%
+;;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%ST_SYSFX_POSTMIX_CLSID%
 ;HKR,"FX\\0",%PKEY_FX_UiClsid%,,%FX_UI_CLSID%
 HKR,"FX\\0",%PKEY_FX_UiClsid%,,%PAGE_MASTER_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_0%,,%3DHP_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_1%,,%FX_UI_CLSID%
+HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_2%,,%ST_SYSFX_UI_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0010
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX_BEAMFORMING%, %REG_DWORD%, 0x0000
@@ -612,25 +635,33 @@ HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
 HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
 
 ;; CNXT MFX keys
-HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
+;HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_MFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 ;; CNXT SFX keys
-HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
+;HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_SFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 ;; SRS EFX keys
-HKR,"FX\\0",%PKEY_FX_EndpointEffectClsid%,,%SRS3_SYSFX_EFX_CLSID%
+;HKR,"FX\\0",%PKEY_FX_EndpointEffectClsid%,,%SRS3_SYSFX_EFX_CLSID%
+;HKR,"FX\\0",%PKEY_EFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
+
+;; IDT SFX MFX EFX keys
+HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%ST_SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%ST_SYSFX_POSTMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_EndpointEffectClsid%,,%ST_SYSFX_ENDPOINT_CLSID%
 HKR,"FX\\0",%PKEY_EFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 [HdAudModel.SSysFxW8.CNXT.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
-;;HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%SYSFX_POSTMIX_CLSID%
-;;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_ren"
+;;HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%ST_SYSFX_PREMIX_CLSID%
+;;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%ST_SYSFX_POSTMIX_CLSID%
 ;HKR,"FX\\0",%PKEY_FX_UiClsid%,,%FX_UI_CLSID%
 HKR,"FX\\0",%PKEY_FX_UiClsid%,,%PAGE_MASTER_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_0%,,%3DHP_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_1%,,%FX_UI_CLSID%
+HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_2%,,%ST_SYSFX_UI_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0010
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX_BEAMFORMING%, %REG_DWORD%, 0x0000
@@ -645,12 +676,19 @@ HKR,"FX\\0","{0C709614-E770-0001-4000-018664542698},1017", %REG_DWORD%, 0x0001  
 HKR,"FX\\0","{0C709614-E770-0001-4000-018664542698},1020", %REG_DWORD%, 0x0000  ;;Disable Pause Ramping
 
 ;; CNXT MFX keys
-HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
+;HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_MFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 ;; CNXT SFX keys
-HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
+;HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_SFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
+
+;; IDT SFX MFX EFX keys
+HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%ST_SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%ST_SYSFX_POSTMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_EndpointEffectClsid%,,%ST_SYSFX_ENDPOINT_CLSID%
+HKR,"FX\\0",%PKEY_EFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
+
 
 [HdAudModel.ESSysFx.AddReg]
 HKR,"EP\\0",%PKEY_AudioEndpoint_Association%,,%KSNODETYPE_SPEAKER%
@@ -658,6 +696,7 @@ HKR,"EP\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0010
 
 [HdAudModel.HSysFx.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_ren"
 HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%SYSFX_POSTMIX_CLSID%
 HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SRS_SYSFX_PREMIX_CLSID%
 HKR,"FX\\0",%PKEY_FX_UiClsid%,,%FX_UI_CLSID%
@@ -677,12 +716,14 @@ HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
 
 [HdAudModel.HSysFx.CNXT.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
-HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%SYSFX_POSTMIX_CLSID%
-HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_ren"
+HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%ST_SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%ST_SYSFX_POSTMIX_CLSID%
 ;HKR,"FX\\0",%PKEY_FX_UiClsid%,,%FX_UI_CLSID%
 HKR,"FX\\0",%PKEY_FX_UiClsid%,,%PAGE_MASTER_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_0%,,%3DHP_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_1%,,%FX_UI_CLSID%
+HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_2%,,%ST_SYSFX_UI_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0050
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX_BEAMFORMING%, %REG_DWORD%, 0x0000
@@ -693,12 +734,14 @@ HKR,"FX\\0",%PKEY_FX_Association%,,%KSNODETYPE_HEADPHONES%
 
 [HdAudModel.HSysFxW8.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
-;;HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%SYSFX_POSTMIX_CLSID%
-;;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_ren"
+;;HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%ST_SYSFX_PREMIX_CLSID%
+;;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%ST_SYSFX_POSTMIX_CLSID%
 ;HKR,"FX\\0",%PKEY_FX_UiClsid%,,%FX_UI_CLSID%
 HKR,"FX\\0",%PKEY_FX_UiClsid%,,%PAGE_MASTER_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_0%,,%3DHP_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_1%,,%FX_UI_CLSID%
+HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_2%,,%ST_SYSFX_UI_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0050
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX_BEAMFORMING%, %REG_DWORD%, 0x0000
@@ -714,25 +757,33 @@ HKR,"EP\\0",%PKEY_SRS30_HWIdentifier%,,
 HKR,"EP\\0",%PKEY_SRS30_CodecId%,,0x0200
 
 ;; CNXT MFX keys
-HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
+;HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_MFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 ;; CNXT SFX keys
-HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
+;HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_SFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 ;; SRS EFX keys
-HKR,"FX\\0",%PKEY_FX_EndpointEffectClsid%,,%SRS3_SYSFX_EFX_CLSID%
+;HKR,"FX\\0",%PKEY_FX_EndpointEffectClsid%,,%SRS3_SYSFX_EFX_CLSID%
+HKR,"FX\\0",%PKEY_EFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
+
+;; IDT SFX MFX EFX keys
+HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%ST_SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%ST_SYSFX_POSTMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_EndpointEffectClsid%,,%ST_SYSFX_ENDPOINT_CLSID%
 HKR,"FX\\0",%PKEY_EFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 [HdAudModel.HSysFxW8.CNXT.AddReg]
 HKR,"FX\\0",%PKEY_ItemNameDisplay%,,%SYSFX_FriendlyName%
-;;HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%SYSFX_POSTMIX_CLSID%
-;;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_ren"
+;;HKR,"FX\\0",%PKEY_FX_PostMixClsid%,,%ST_SYSFX_PREMIX_CLSID%
+;;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%ST_SYSFX_POSTMIX_CLSID%
 ;HKR,"FX\\0",%PKEY_FX_UiClsid%,,%FX_UI_CLSID%
 HKR,"FX\\0",%PKEY_FX_UiClsid%,,%PAGE_MASTER_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_0%,,%3DHP_UI_CLSID%
 HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_1%,,%FX_UI_CLSID%
+HKR,"FX\\0",%PKEY_PAGE_MASTER_PAGE_2%,,%ST_SYSFX_UI_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0050
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX_BEAMFORMING%, %REG_DWORD%, 0x0000
@@ -742,12 +793,18 @@ HKR,"FX\\0",%PKEY_AudioEndpoint_Disable_SysFx%, %REG_DWORD%, 0x0000
 HKR,"FX\\0",%PKEY_FX_Association%,,%KSNODETYPE_HEADPHONES%
 
 ;; CNXT MFX keys
-HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
+;HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%SYSFX_POSTMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_MFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 ;; CNXT SFX keys
-HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
+;HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%SYSFX_PREMIXW8_CLSID%
 HKR,"FX\\0",%PKEY_SFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
+
+;; IDT SFX MFX EFX keys
+HKR,"FX\\0",%PKEY_FX_StreamEffectClsid%,,%ST_SYSFX_PREMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_ModeEffectClsid%,,%ST_SYSFX_POSTMIX_CLSID%
+HKR,"FX\\0",%PKEY_FX_EndpointEffectClsid%,,%ST_SYSFX_ENDPOINT_CLSID%
+HKR,"FX\\0",%PKEY_EFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO_SIGNALPROCESSINGMODE_DEFAULT%
 
 [HdAudModel.EHSysFx.AddReg]
 HKR,"EP\\0",%PKEY_AudioEndpoint_Association%,,%KSNODETYPE_HEADPHONES%
@@ -788,6 +845,10 @@ HKR,"EP\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0020
 [SfxFx.CopyList]
 CX32BP23.dll
 CxPageMaster32.dll
+srs_apo_suite.dll
+Com_SRS_WOWHD.dll
+Com_SRS_TruSurroundXT.dll
+SRS_APO_Prop_Page.dll
 
 [3DHP.CopyFiles]
 C3DHPExt32.dll
@@ -795,6 +856,10 @@ C3DHPExt32.dll
 [SfxFx.RegisterDlls]
 11,,CX32BP23.dll,1
 11,,CxPageMaster32.dll,1
+11,,srs_apo_suite.dll,1
+11,,com_srs_wowhd.dll,1
+11,,com_srs_trusurroundxt.dll,1
+11,,SRS_APO_Prop_Page.dll,1
 
 [3DHP.RegisterDlls]
 11,,C3DHPExt32.dll,1
@@ -802,10 +867,18 @@ C3DHPExt32.dll
 [SfxFxW8.CopyList]
 CX32BP23.dll
 CxPageMaster32.dll
+srs_apo_suite.dll
+Com_SRS_WOWHD.dll
+Com_SRS_TruSurroundXT.dll
+SRS_APO_Prop_Page.dll
 
 [SfxFxW8.RegisterDlls]
 11,,CX32BP23.dll,1
 11,,CxPageMaster32.dll,1
+11,,srs_apo_suite.dll,1
+11,,com_srs_wowhd.dll,1
+11,,com_srs_trusurroundxt.dll,1
+11,,SRS_APO_Prop_Page.dll,1
 
 [SRSFx.CopyList]
 slcnt32.dll
@@ -819,6 +892,17 @@ slconfig.xml
 11,SRSLabs,slprp32.dll,1
 11,SRSLabs,sltech32.dll,1
 11,SRSLabs,sluapo32.dll,1
+
+[ST.DLL.CopyList]
+stapi32.dll
+stapo.dll
+stcplx.dll
+stlang.dll
+
+[ST.DLL.RegisterDlls]
+11,,stapi32.dll,1
+11,,stapo.dll,1
+11,,stcplx.dll,1
 
 [HdAud_Service_Install]
 DisplayName   = %UAAFunctionDriverForHdAudio.SvcDesc%
@@ -906,18 +990,108 @@ HKLM,%SRS_REGISTRY%,"{66E88EA2-A239-4e1f-82FF-2F45359AEC94},9",%REG_DWORD%,0x000
 HKLM,%SRS_REGISTRY%\SRS Premium Sound,"ControlPanelPath",,"C:\Program Files\DTS, Inc\DTS Studio Sound\APO3GUI.exe" 
 HKLM,%SRS_REGISTRY%\SRS Premium Sound,"ControlPanelArg",,"" 
 
-HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"Priority",%REG_DWORD%,0x00000010
-HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"SupportAPOs",%REG_DWORD%,0x00000007
-HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"SupportJacks",%REG_DWORD%,0xFFFFFFFF
-HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"SupportFormats",%REG_DWORD%,0xFFFFFFFF
-HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"Requirements",%REG_DWORD%,0x00000010
-HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"Disable",%REG_DWORD%,0x00000000
-HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"Group",%REG_DWORD%,0x00000000
-HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"ORDER",%REG_DWORD%,0x00002000
-HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"CheckApp",%REG_DWORD%,0x00000001
+;HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"Priority",%REG_DWORD%,0x00000010
+;HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"SupportAPOs",%REG_DWORD%,0x00000007
+;HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"SupportJacks",%REG_DWORD%,0xFFFFFFFF
+;HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"SupportFormats",%REG_DWORD%,0xFFFFFFFF
+;HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"Requirements",%REG_DWORD%,0x00000010
+;HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"Disable",%REG_DWORD%,0x00000000
+;HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"Group",%REG_DWORD%,0x00000000
+;HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"ORDER",%REG_DWORD%,0x00002000
+;HKR,%RenPluginGFX%\%SRS3_SYSFX_MFX_CLSID%,"CheckApp",%REG_DWORD%,0x00000001
+
+[SRSAPO.AddReg]
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Audio","DisableProtectedAudioDG", %REG_DWORD%, 0x00000001
 
 [SRS.AddReg.Security]
 "D:(A;;GA;;;WD)"
+
+[ST.FX.AddReg]
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Audio","DisableProtectedAudioDG", %REG_DWORD%, 0x00000001
+
+;HKR,%RenPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"Priority",%REG_DWORD%,0x00000010
+;HKR,%RenPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"SupportAPOs",%REG_DWORD%,0x00000007
+;HKR,%RenPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"SupportJacks",%REG_DWORD%,0xFFFFFFFF
+;HKR,%RenPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"SupportFormats",%REG_DWORD%,0xFFFFFFFF
+;HKR,%RenPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"Requirements",%REG_DWORD%,0x00000010
+;HKR,%RenPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"Disable",%REG_DWORD%,0x00000000
+;HKR,%RenPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"Group",%REG_DWORD%,0x00000000
+;HKR,%RenPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"ORDER",%REG_DWORD%,0x00000400
+;HKR,%RenPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"CheckApp",%REG_DWORD%,0x00000001
+;HKR,%RenPluginGFX%\%ST_SYSFX_POSTMIX_CLSID%,"Priority",%REG_DWORD%,0x00000010
+;HKR,%RenPluginGFX%\%ST_SYSFX_POSTMIX_CLSID%,"SupportAPOs",%REG_DWORD%,0x00000007
+;HKR,%RenPluginGFX%\%ST_SYSFX_POSTMIX_CLSID%,"SupportJacks",%REG_DWORD%,0xFFFFFFFF
+;HKR,%RenPluginGFX%\%ST_SYSFX_POSTMIX_CLSID%,"SupportFormats",%REG_DWORD%,0xFFFFFFFF
+;HKR,%RenPluginGFX%\%ST_SYSFX_POSTMIX_CLSID%,"Requirements",%REG_DWORD%,0x00000010
+;HKR,%RenPluginGFX%\%ST_SYSFX_POSTMIX_CLSID%,"Disable",%REG_DWORD%,0x00000000
+;HKR,%RenPluginGFX%\%ST_SYSFX_POSTMIX_CLSID%,"Group",%REG_DWORD%,0x00000000
+;HKR,%RenPluginGFX%\%ST_SYSFX_POSTMIX_CLSID%,"ORDER",%REG_DWORD%,0x00000400
+;HKR,%RenPluginGFX%\%ST_SYSFX_POSTMIX_CLSID%,"CheckApp",%REG_DWORD%,0x00000001
+
+;HKR,%CapPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"Priority",%REG_DWORD%,0x00000010
+;HKR,%CapPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"SupportAPOs",%REG_DWORD%,0x00000007
+;HKR,%CapPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"SupportJacks",%REG_DWORD%,0xFFFFFFFF
+;HKR,%CapPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"SupportFormats",%REG_DWORD%,0xFFFFFFFF
+;HKR,%CapPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"Requirements",%REG_DWORD%,0x00000010
+;HKR,%CapPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"Disable",%REG_DWORD%,0x00000000
+;HKR,%CapPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"Group",%REG_DWORD%,0x00000000
+;HKR,%CapPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"ORDER",%REG_DWORD%,0x00000400
+;HKR,%CapPluginLFX%\%ST_SYSFX_PREMIX_CLSID%,"CheckApp",%REG_DWORD%,0x00000001
+
+HKLM,%IDTCapPluginLFX%\CNXTAPO,"ApoClsId",,%SYSFX_PREMIXW8_CLSID%
+HKLM,%IDTCapPluginLFX%\CNXTAPO,"idEffect",%REG_DWORD%,0x00000051
+HKLM,%IDTCapPluginLFX%\CNXTAPO,"idEffectType",%REG_DWORD%,0x00000032
+HKLM,%IDTCapPluginLFX%\CNXTAPO,"load",%REG_DWORD%,0x00000001
+HKLM,%IDTCapPluginLFX%\CNXTAPO,"order",%REG_DWORD%,0x00000002
+;HKLM,%IDTCapPluginUI%,"CNXTAPO",,%FMFx_UI_CLSID%
+HKLM,%IDTRenPluginGFX%\CNXTAPO,"ApoClsId",,%SYSFX_POSTMIXW8_CLSID%
+HKLM,%IDTRenPluginGFX%\CNXTAPO,"idEffect",%REG_DWORD%,0x00000051
+HKLM,%IDTRenPluginGFX%\CNXTAPO,"idEffectType",%REG_DWORD%,0x00000032
+HKLM,%IDTRenPluginGFX%\CNXTAPO,"load",%REG_DWORD%,0x00000001
+HKLM,%IDTRenPluginGFX%\CNXTAPO,"order",%REG_DWORD%,0x00000005
+HKLM,%IDTRenPluginLFX%\CNXTAPO,"ApoClsId",,%SYSFX_PREMIXW8_CLSID%
+HKLM,%IDTRenPluginLFX%\CNXTAPO,"idEffect",%REG_DWORD%,0x00000051
+HKLM,%IDTRenPluginLFX%\CNXTAPO,"idEffectType",%REG_DWORD%,0x00000032
+HKLM,%IDTRenPluginLFX%\CNXTAPO,"load",%REG_DWORD%,0x00000001
+HKLM,%IDTRenPluginLFX%\CNXTAPO,"order",%REG_DWORD%,0x00000005
+
+HKLM,%IDTRenPluginEFX%\SRSUAPO3,"ApoClsId",,%SRS3_SYSFX_EFX_CLSID%
+HKLM,%IDTRenPluginEFX%\SRSUAPO3,"idEffect",%REG_DWORD%,0x00000053
+HKLM,%IDTRenPluginEFX%\SRSUAPO3,"idEffectType",%REG_DWORD%,0x00000032
+HKLM,%IDTRenPluginEFX%\SRSUAPO3,"load",%REG_DWORD%,0x00000001
+HKLM,%IDTRenPluginEFX%\SRSUAPO3,"order",%REG_DWORD%,0x00000005
+HKLM,%IDTRenPluginGFX%\SRSUAPO3,"ApoClsId",,%SRS3_SYSFX_MFX_CLSID%
+HKLM,%IDTRenPluginGFX%\SRSUAPO3,"idEffect",%REG_DWORD%,0x00000053
+HKLM,%IDTRenPluginGFX%\SRSUAPO3,"idEffectType",%REG_DWORD%,0x00000032
+HKLM,%IDTRenPluginGFX%\SRSUAPO3,"load",%REG_DWORD%,0x00000001
+HKLM,%IDTRenPluginGFX%\SRSUAPO3,"order",%REG_DWORD%,0x00000005
+;HKLM,%IDTRenPluginLFX%\SRSUAPO3,"ApoClsId",,%SRS3_SYSFX_SFX_CLSID%
+;HKLM,%IDTRenPluginLFX%\SRSUAPO3,"idEffect",%REG_DWORD%,0x00000053
+;HKLM,%IDTRenPluginLFX%\SRSUAPO3,"idEffectType",%REG_DWORD%,0x00000032
+;HKLM,%IDTRenPluginLFX%\SRSUAPO3,"load",%REG_DWORD%,0x00000001
+;HKLM,%IDTRenPluginLFX%\SRSUAPO3,"order",%REG_DWORD%,0x00000005
+
+HKLM,%IDTRenPluginGFX%\SRSAPO,"ApoClsId",,%SRSAPO_SYSFX_POSTMIX_CLSID%
+HKLM,%IDTRenPluginGFX%\SRSAPO,"idEffect",%REG_DWORD%,0x00000052
+HKLM,%IDTRenPluginGFX%\SRSAPO,"idEffectType",%REG_DWORD%,0x00000032
+HKLM,%IDTRenPluginGFX%\SRSAPO,"load",%REG_DWORD%,0x00000001
+HKLM,%IDTRenPluginGFX%\SRSAPO,"order",%REG_DWORD%,0x00000005
+HKLM,%IDTRenPluginUI%,"SRSAPO",,%SRSAPO_SYSFX_UI_CLSID%
+HKLM,%IDTRenPluginLFX%\SRSAPO,"ApoClsId",,%SRSAPO_SYSFX_PREMIX_CLSID%
+HKLM,%IDTRenPluginLFX%\SRSAPO,"idEffect",%REG_DWORD%,0x00000052
+HKLM,%IDTRenPluginLFX%\SRSAPO,"idEffectType",%REG_DWORD%,0x00000032
+HKLM,%IDTRenPluginLFX%\SRSAPO,"load",%REG_DWORD%,0x00000001
+HKLM,%IDTRenPluginLFX%\SRSAPO,"order",%REG_DWORD%,0x00000005
+
+[ST.FX.DelReg]
+HKLM,%IDTRenPluginGFX%
+HKLM,%IDTRenPluginLFX%
+HKLM,%IDTRenPluginEFX%
+HKLM,%IDTRenPluginUI%
+HKLM,%IDTCapPluginGFX%
+HKLM,%IDTCapPluginLFX%
+HKLM,%IDTCapPluginEFX%
+HKLM,%IDTCapPluginUI%
 
 [LvlRelAdjust.AddReg]
 HKLM, SYSTEM\CurrentControlSet\Control\Conexant\LvlRelAdjust,BalanceChannel,0x10001,0x00000001 ;
@@ -2991,6 +3165,7 @@ HKR,"EP\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0060
 
 [SysFx.Capture.Addreg]
 HKR,"FX\\0",%PKEY_DisplayName%,,%SYSFX_FriendlyName%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_cap"
 HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SYSFX_PREMIX_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0030
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
@@ -3007,6 +3182,7 @@ HKR,"FX\\0","{0C709614-E770-0001-4000-018664542698},1012", %REG_DWORD%, 0x180000
 
 [SysFxW8.Capture.Addreg]
 HKR,"FX\\0",%PKEY_DisplayName%,,%SYSFX_FriendlyName%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_cap"
 ;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SYSFX_PREMIX_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0030
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
@@ -3031,6 +3207,7 @@ HKR,"FX\\0",%PKEY_SFX_ProcessingModes_Supported_For_Streaming%,0x00010000,%AUDIO
 
 [SysFxW10.Capture.Addreg]
 HKR,"FX\\0",%PKEY_DisplayName%,,%SYSFX_FriendlyName%
+HKR,"FX\\0",%PKEY_FX_ID%,,"kgtmaven_cnxt_cap"
 ;HKR,"FX\\0",%PKEY_FX_PreMixClsid%,,%SYSFX_PREMIX_CLSID%
 HKR,"FX\\0",%PKEY_Endpoint_ID%, %REG_DWORD%, 0x0030
 HKR,"FX\\0",%PKEY_Endpoint_Enable_LFX%, %REG_DWORD%, 0x0000
@@ -3233,6 +3410,14 @@ EPattributePath03="Settings\EPattributes03"
 REG_BINARY = 0x00000001
 REG_DWORD = 0x00010001
 
+;; SRS-specific GUIDs
+PKEY_SRS_Enable_LFX				= "{66E88EA2-A239-4e1f-82FF-2F45359AEC94},0"
+
+SRSAPO_SYSFX_UI_CLSID      = "{013CBB27-A6C9-4268-900D-9D87A87380AC}"
+SRSAPO_SYSFX_PREMIX_CLSID  = "{1A0B89A1-2C5F-4531-BE63-0E24C1B5BC9C}"
+SRSAPO_SYSFX_POSTMIX_CLSID = "{A27368B3-D810-42ce-B114-83900258B8EC}"
+SRSAPO_SYSFX_FriendlyName  = "Audio Technologies from SRS Labs"
+
 PKEY_SRS30_Association  = "{7A8B74C8-FA66-4460-8542-D6119C59E9D4},0"
 PKEY_SRS30_APOLocation  = "{7A8B74C8-FA66-4460-8542-D6119C59E9D4},1"
 PKEY_SRS30_XmlLocation  = "{7A8B74C8-FA66-4460-8542-D6119C59E9D4},2"
@@ -3266,6 +3451,7 @@ PKEY_FX_PreMixClsid  = "{D04E05A6-594B-4fb6-A80D-01AF5EED7D1D},1"
 PKEY_FX_PostMixClsid = "{D04E05A6-594B-4fb6-A80D-01AF5EED7D1D},2"
 PKEY_FX_UiClsid      = "{D04E05A6-594B-4fb6-A80D-01AF5EED7D1D},3"
 PKEY_DisplayName     = "{D04E05A6-594B-4FB6-A80D-01AF5EED7D1D},4"
+PKEY_FX_ID           = "{D04E05A6-594B-4FB6-A80D-01AF5EED7D1D},9"
 PKEY_ItemNameDisplay = "{B725F130-47EF-101A-A5F1-02608C9EEBAC},10"
 PKEY_AudioEndpoint_Disable_SysFx = "{1da5d803-d492-4edd-8c23-e0c0ffee7f0e},5"
 PKEY_AudioEndpoint_Ext_UiClsid = "{1DA5D803-D492-4EDD-8C23-E0C0FFEE7F0E},1"
@@ -3307,6 +3493,14 @@ PKEY_PAGE_MASTER_PAGE_9 = "{AA747400-B9F8-4D7F-B41C-F8CF3047A0DB},9" ; 10th Page
 RenPluginLFX = "Settings\Plugins\Render\LFX"
 RenPluginGFX = "Settings\Plugins\Render\GFX"
 CapPluginLFX = "Settings\Plugins\Capture\LFX"
+IDTRenPluginLFX = "Software\IDT\APO\LFX\kgtmaven_cnxt_ren\Plugins"
+IDTRenPluginGFX = "Software\IDT\APO\GFX\kgtmaven_cnxt_ren\Plugins"
+IDTRenPluginEFX = "Software\IDT\APO\EFX\kgtmaven_cnxt_ren\Plugins"
+IDTRenPluginUI = "Software\IDT\APO\UI\kgtmaven_cnxt_ren\ExtPages"
+IDTCapPluginLFX = "Software\IDT\APO\LFX\kgtmaven_cnxt_cap\Plugins"
+IDTCapPluginGFX = "Software\IDT\APO\GFX\kgtmaven_cnxt_cap\Plugins"
+IDTCapPluginEFX = "Software\IDT\APO\EFX\kgtmaven_cnxt_cap\Plugins"
+IDTCapPluginUI = "Software\IDT\APO\UI\kgtmaven_cnxt_cap\ExtPages"
 
 ; For Windows 8.1 Defines
 PKEY_FX_StreamEffectClsid   = "{D04E05A6-594B-4fb6-A80D-01AF5EED7D1D},5"
@@ -3331,6 +3525,15 @@ FX_POSTMIX_CLSID = "{637c490d-eee3-4c0a-973f-371958802da2}"
 FX_FriendlyName  = "Microsoft Audio Home Theater Effects"
 
 DesDigiMicBoost_CLSID = "{4d8b5a4e-4f8b-4be5-b109-4b7214611257},2"
+
+;;IDT GUIDS
+ST_SYSFX_UI_CLSID          = "{09ED2575-2EC1-488b-B005-E13AE21C80E6}"
+ST_SYSFX_PREMIX_CLSID      = "{C3413380-F4BA-4afa-9BDC-F3C98BA73442}"
+ST_SYSFX_POSTMIX_CLSID     = "{BBB6B5C5-E723-4703-9A5D-92F94C5EE034}"
+ST_SYSFX_ENDPOINT_CLSID     = "{EE9C67FD-0530-48BE-B14C-533F98207CE0}"
+ST_SYSFX_FriendlyName      = "IDT Audio Effects"
+ST_CONTROLLER_EXT_UI_CLSID    = "{4BBD81D6-5FF2-47a6-9AAC-05ABE8C45598}"
+ST_AUDIOENDPOINT_EXT_UI_CLSID = "{25FFF4CD-B59A-4768-A09D-11A11A0B7DA2}"
 
 ; History Information
 DriverMfgr="Conexant"
